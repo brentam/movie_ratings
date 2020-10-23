@@ -22,7 +22,7 @@ public class MovieResource {
 
         @RequestMapping("/{movieId}")
 	public Movie getMovies(@PathVariable("movieId")String movieId){
-	 return new Movie(movieId, "Movie Name");
+	 return new Movie(movieId, movieId+" - name");
 	}
 	
 }
