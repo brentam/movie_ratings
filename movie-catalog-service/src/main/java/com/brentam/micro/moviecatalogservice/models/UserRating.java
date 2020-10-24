@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class UserRating {
 	private List<Rating> ratings;
+	private String userId;
 
 	public UserRating() {
 	}
@@ -33,6 +34,20 @@ public class UserRating {
 	 */
 	public void setRatings(List<Rating> ratings) {
 		this.ratings = ratings;
+	}
+
+	/**
+	 * @return the userId
+	 */
+	public String getUserId() {
+		return userId;
+	}
+
+	/**
+	 * @param userId the userId to set
+	 */
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	
 }

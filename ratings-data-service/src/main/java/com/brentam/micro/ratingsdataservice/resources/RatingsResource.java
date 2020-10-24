@@ -29,12 +29,14 @@ public class RatingsResource {
 	
         @RequestMapping("user/{userId}")
 	public UserRating getUserRatings(@PathVariable("userId")String userId){
-		int count=6;
+		int count=2;
 		ArrayList<Rating> ratings = new ArrayList<>(count);
 		for (int i = 0; i < count; i++) {
-			ratings.add(new Rating("movieId" + i, 3));
+			ratings.add(new Rating(Integer.toString(100+i) , i+1));
 		}
-	return	new UserRating(ratings);
+	UserRating r=	new UserRating(ratings);
+	r.setUserId(userId);
+	return r;
 	}
 	
 }
